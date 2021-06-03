@@ -39,37 +39,19 @@ fn main() {
         }
     }
 
-    // println!("N: {}, L: {}", n, l);
-    // println!("K :{}", k);
-    // println!("Xs: {:?}", xs);
-    // println!("Diffs: {:?}", diffs);
-    //
     let mut left: isize = 0;
     let mut right: isize = l.clone();
-    // //
+
     while (right - left) > 1 {
         let mid: isize = left + ((right - left) / 2);
 
-        // println!("=============");
-        // println!("Left {}, Right: {}", left, right);
-        // println!("K: {}, Mid: {}, Solve: {}", k, mid, solve(&mid, &diffs));
-        // println!("Result: {}", solve(&mid, &diffs) > k);
         if solve(&mid, &diffs) > k {
-            // println!("Go Right");
             left = mid
         } else {
-            // println!("Go Left");
             right = mid
         }
     }
-    //
     println!("{}", left);
-    // println!("Right: {}", right);
-    // let mut mid = left + (right + left) / 2;
-    //
-    // if ()
-
-    // println!("Mid / idx: {}, Value: {}", mid, xs[mid]);
 }
 
 fn read<T: std::str::FromStr>() -> T {
