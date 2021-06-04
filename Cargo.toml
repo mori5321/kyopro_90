@@ -11,3 +11,7 @@ edition = "2018"
 [[bin]]
 name = "yokan_001"
 path = "src/yokan_001.rs"
+
+[[bin]]
+name = "parentheses_002"
+path = "src/parentheses_002.rs"
